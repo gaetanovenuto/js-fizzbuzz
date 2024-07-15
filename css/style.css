@@ -5,7 +5,25 @@
 /********************* 
     BACKGROUND COLORS
 **********************/
+.bg-aqua {
+    background-color: #083B4C;
+}
 
+.bg-lightblue {
+    background-color: #1389B2;
+}
+
+.bg-lightgreen {
+    background-color: #0CD6A1;
+}
+
+.bg-yellow {
+    background-color: #FFD166;
+}
+
+.bg-red {
+    background-color: #F0466F;
+}
 /********************* 
     TEXT
 **********************/
@@ -13,3 +31,12 @@
 /********************* 
     CONTAINERS
 **********************/
+
+.number-row {
+    width: calc((100% / 7) - 15px);
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+}
