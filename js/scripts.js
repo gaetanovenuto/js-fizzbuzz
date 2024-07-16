@@ -15,8 +15,19 @@ for (let i = 1; i <= 700; i++) {
     if (i % 3 === 0 & i % 5 === 0) {
         console.log('FizzBuzz');
         Box.append("FizzBuzz");
-        Box.classList.remove("bg-lightblue");
-        Box.classList.add("bg-red");
+        Box.classList.replace("bg-lightblue","bg-red");
+        Box.addEventListener('click',
+            function() {
+                const layover = document.getElementById('layover');
+                layover.style.display = 'block';
+                document.getElementById('title').innerHTML = "FizzBuzz";
+                layover.addEventListener('click',
+                    function() {
+                        layover.style.display = 'none';
+                    }
+                )
+            }
+        )
     }
 
     // Se il numero è un multiplo di 5, stampo in console "Fizz"
@@ -24,8 +35,19 @@ for (let i = 1; i <= 700; i++) {
     else if (i % 5 === 0) {
         console.log('Fizz');
         Box.append("Fizz");
-        Box.classList.remove("bg-lightblue");
-        Box.classList.add("bg-lightgreen");
+        Box.classList.replace("bg-lightblue","bg-lightgreen");
+        Box.addEventListener('click',
+            function() {
+                const layover = document.getElementById('layover');
+                layover.style.display = 'block';
+                document.getElementById('title').innerHTML = "Fizz";
+                layover.addEventListener('click',
+                    function() {
+                        layover.style.display = 'none';
+                    }
+                )
+            }
+        )
     }
 
     // Se il numero è un multiplo di 3, stampo in console "Buzz"
@@ -33,8 +55,19 @@ for (let i = 1; i <= 700; i++) {
     else if (i % 3 === 0) {
         console.log('Buzz');
         Box.append("Buzz");
-        Box.classList.remove("bg-lightblue");
-        Box.classList.add("bg-yellow");
+        Box.classList.replace("bg-lightblue","bg-yellow");
+        Box.addEventListener('click',
+            function() {
+                const layover = document.getElementById('layover');
+                layover.style.display = 'block';
+                document.getElementById('title').innerHTML = "Buzz";
+                layover.addEventListener('click',
+                    function() {
+                        layover.style.display = 'none';
+                    }
+                )
+            }
+        )
     }
 
     // Se il numero non rispetta i precedenti requisiti, viene stampato normalmente in console
@@ -42,5 +75,17 @@ for (let i = 1; i <= 700; i++) {
     else {
         console.log(i);
         Box.append(i);
+        Box.addEventListener('click',
+            function() {
+                const layover = document.getElementById('layover');
+                layover.style.display = 'block';
+                document.getElementById('title').innerHTML = i;
+                layover.addEventListener('click',
+                    function() {
+                        layover.style.display = 'none';
+                    }
+                )
+            }
+        )
     }
 }
